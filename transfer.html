@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferir Token Fungible en Algorand</title>
+</head>
+<body>
+    <h1>Transferir Token Fungible en Algorand</h1>
+    <form id="optInForm">
+        <label for="mnemOptIn">Mnemónico de la cuenta para Opt-In:</label><br>
+        <input type="text" id="mnemOptIn" name="mnemOptIn" required><br><br>
+
+        <label for="assetIDOptIn">Asset ID del Token para Opt-In:</label><br>
+        <input type="number" id="assetIDOptIn" name="assetIDOptIn" required><br><br>
+
+        <button type="submit">Opt-In al Token</button>
+    </form>
+
+    <p id="optInStatus"></p>
+
+    <hr>
+
+    <form id="transferForm">
+        <label for="mnem">Mnemónico de la cuenta emisora:</label><br>
+        <input type="text" id="mnem" name="mnem" required><br><br>
+
+        <label for="receiver">Dirección de la cuenta receptora:</label><br>
+        <input type="text" id="receiver" name="receiver" required><br><br>
+
+        <label for="assetID">Asset ID del Token:</label><br>
+        <input type="number" id="assetID" name="assetID" required><br><br>
+
+        <label for="amount">Cantidad a Transferir:</label><br>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <button type="submit">Transferir Token</button>
+    </form>
+
+    <p id="status"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/algosdk/dist/browser/algosdk.min.js"></script>
+    <script src="transfer.js"></script>
+</body>
+</html>
